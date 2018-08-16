@@ -7,9 +7,10 @@
     android:orientation="vertical"
     tools:context="andrade.amilcar.mvp_viewmodel.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <Button
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:text="@string/start_delegate"
+        android:onClick="startDelegateActivity"/>
 
 </LinearLayout>
