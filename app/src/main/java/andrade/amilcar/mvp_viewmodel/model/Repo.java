@@ -8,8 +8,16 @@ public class Repo {
 
     private String url;
 
-    @SerializedName("full_name")
+    @SerializedName("name")
     private String name;
 
     private String description;
+
+    public String getDescription() {
+        return description;
+    }
+
+    public String getName() {
+        return name;
+    }
 }
