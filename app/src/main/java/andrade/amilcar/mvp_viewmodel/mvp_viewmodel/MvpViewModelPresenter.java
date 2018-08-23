@@ -1,4 +1,4 @@
-package andrade.amilcar.mvp_viewmodel.delegate;
+package andrade.amilcar.mvp_viewmodel.mvp_viewmodel;
 
 import android.arch.lifecycle.Observer;
 import android.support.annotation.NonNull;
@@ -8,14 +8,14 @@ import java.util.List;
 
 import andrade.amilcar.mvp_viewmodel.model.Repo;
 
-class DelegatePresenter implements DelegateContract.Presenter {
+class MvpViewModelPresenter implements MvpViewModelContract.Presenter {
 
-    private final DelegateViewModel viewModel;
-    private final DelegateContract.View view;
+    private final MvpViewModel viewModel;
+    private final MvpViewModelContract.View view;
 
     private Observer<List<Repo>> observer;
 
-    DelegatePresenter(@NonNull DelegateContract.View view, @NonNull DelegateViewModel viewModel) {
+    MvpViewModelPresenter(@NonNull MvpViewModelContract.View view, @NonNull MvpViewModel viewModel) {
         this.viewModel = viewModel;
         this.view = view;
     }

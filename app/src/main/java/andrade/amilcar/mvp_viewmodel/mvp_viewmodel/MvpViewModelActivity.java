@@ -1,4 +1,4 @@
-package andrade.amilcar.mvp_viewmodel.delegate;
+package andrade.amilcar.mvp_viewmodel.mvp_viewmodel;
 
 import android.arch.lifecycle.ViewModelProviders;
 import android.os.Bundle;
@@ -13,9 +13,9 @@ import andrade.amilcar.mvp_viewmodel.model.Repo;
 import andrade.amilcar.mvp_viewmodel.service.GithubRepository;
 import andrade.amilcar.mvp_viewmodel.ui.ReposAdapter;
 
-public class DelegateActivity extends AppCompatActivity implements DelegateContract.View {
+public class MvpViewModelActivity extends AppCompatActivity implements MvpViewModelContract.View {
 
-    private DelegateContract.Presenter presenter;
+    private MvpViewModelContract.Presenter presenter;
 
     private RecyclerView recyclerView;
 
@@ -40,9 +40,9 @@ public class DelegateActivity extends AppCompatActivity implements DelegateContr
     }
 
     @Override
-    public DelegateContract.Presenter createPresenter() {
-        final DelegateViewModel.Factory factory = new DelegateViewModel.Factory(GithubRepository.INSTANCE);
-        return new DelegatePresenter(this, ViewModelProviders.of(this, factory).get(DelegateViewModel.class));
+    public MvpViewModelContract.Presenter createPresenter() {
+        final MvpViewModel.Factory factory = new MvpViewModel.Factory(GithubRepository.INSTANCE);
+        return new MvpViewModelPresenter(this, ViewModelProviders.of(this, factory).get(MvpViewModel.class));
     }
 
     @Override

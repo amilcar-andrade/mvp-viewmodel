@@ -1,4 +1,4 @@
-package andrade.amilcar.mvp_viewmodel.delegate;
+package andrade.amilcar.mvp_viewmodel.mvp_viewmodel;
 
 import android.arch.lifecycle.LiveData;
 import android.arch.lifecycle.MutableLiveData;
@@ -14,13 +14,13 @@ import andrade.amilcar.mvp_viewmodel.service.GithubRepository;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.functions.Consumer;
 
-class DelegateViewModel extends ViewModel {
+class MvpViewModel extends ViewModel {
 
     private MutableLiveData<List<Repo>> reposLive = new MutableLiveData<>();
 
     private Disposable disposable;
 
-    DelegateViewModel(@NonNull GithubRepository repository) {
+    MvpViewModel(@NonNull GithubRepository repository) {
         disposable = repository.getReposAsync().subscribe(new Consumer<List<Repo>>() {
             @Override
             public void accept(List<Repo> repos) throws Exception {
@@ -51,8 +51,8 @@ class DelegateViewModel extends ViewModel {
 
         @NonNull
         @Override
-        public <T extends ViewModel> T create(@NonNull Class<T> modelClass) {
-            return (T) new DelegateViewModel(repository);
+        public <T extends android.arch.lifecycle.ViewModel> T create(@NonNull Class<T> modelClass) {
+            return (T) new MvpViewModel(repository);
         }
     }
 

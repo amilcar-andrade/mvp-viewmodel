@@ -19,7 +19,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".delegate.DelegateActivity"/>
+        <activity android:name=".mvp_viewmodel.MvpViewModelActivity"/>
     </application>
 
 </manifest>
