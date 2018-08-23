@@ -5,7 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-import andrade.amilcar.mvp_viewmodel.mvp_viewmodel.MvpViewModelActivity;
+import andrade.amilcar.mvp_viewmodel.mvp_viewmodel.PresenterAsObserverActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -16,6 +16,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void startDelegateActivity(View view) {
-        startActivity(new Intent(this, MvpViewModelActivity.class));
+        startActivity(new Intent(this, PresenterAsObserverActivity.class));
     }
 }

@@ -13,7 +13,7 @@ import andrade.amilcar.mvp_viewmodel.model.Repo;
 import andrade.amilcar.mvp_viewmodel.service.GithubRepository;
 import andrade.amilcar.mvp_viewmodel.ui.ReposAdapter;
 
-public class MvpViewModelActivity extends AppCompatActivity implements MvpViewModelContract.View {
+public class PresenterAsObserverActivity extends AppCompatActivity implements MvpViewModelContract.View {
 
     private MvpViewModelContract.Presenter presenter;
 
@@ -42,7 +42,7 @@ public class MvpViewModelActivity extends AppCompatActivity implements MvpViewMo
     @Override
     public MvpViewModelContract.Presenter createPresenter() {
         final MvpViewModel.Factory factory = new MvpViewModel.Factory(GithubRepository.INSTANCE);
-        return new MvpViewModelPresenter(this, ViewModelProviders.of(this, factory).get(MvpViewModel.class));
+        return new PresenterAsObserver(this, ViewModelProviders.of(this, factory).get(MvpViewModel.class));
     }
 
     @Override

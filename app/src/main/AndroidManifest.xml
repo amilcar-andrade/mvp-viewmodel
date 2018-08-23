@@ -19,7 +19,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".mvp_viewmodel.MvpViewModelActivity"/>
+        <activity android:name=".mvp_viewmodel.PresenterAsObserverActivity"/>
     </application>
 
 </manifest>

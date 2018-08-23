@@ -8,14 +8,14 @@ import java.util.List;
 
 import andrade.amilcar.mvp_viewmodel.model.Repo;
 
-class MvpViewModelPresenter implements MvpViewModelContract.Presenter {
+class PresenterAsObserver implements MvpViewModelContract.Presenter {
 
     private final MvpViewModel viewModel;
     private final MvpViewModelContract.View view;
 
     private Observer<List<Repo>> observer;
 
-    MvpViewModelPresenter(@NonNull MvpViewModelContract.View view, @NonNull MvpViewModel viewModel) {
+    PresenterAsObserver(@NonNull MvpViewModelContract.View view, @NonNull MvpViewModel viewModel) {
         this.viewModel = viewModel;
         this.view = view;
     }
