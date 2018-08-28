@@ -8,9 +8,16 @@
     tools:context="andrade.amilcar.mvp_viewmodel.MainActivity">
 
     <Button
+        android:id="@+id/button_presenter_as_observer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/start_delegate"
-        android:onClick="startDelegateActivity"/>
+        android:text="@string/presenter_as_observer"
+        android:onClick="startPresenterActivity"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/view_model_as_container"
+        android:onClick="startPresenterActivity"/>
 
 </LinearLayout>

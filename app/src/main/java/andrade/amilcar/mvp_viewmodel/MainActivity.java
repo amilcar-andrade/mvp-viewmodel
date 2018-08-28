@@ -1,11 +1,11 @@
 package andrade.amilcar.mvp_viewmodel;
 
-import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
-import andrade.amilcar.mvp_viewmodel.mvp_viewmodel.PresenterAsObserverActivity;
+import andrade.amilcar.mvp_viewmodel.mvp_viewmodel.MvpActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -15,7 +15,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    public void startDelegateActivity(View view) {
-        startActivity(new Intent(this, PresenterAsObserverActivity.class));
+    public void startPresenterActivity(@NonNull View view) {
+        if (R.id.button_presenter_as_observer == view.getId()) {
+            MvpActivity.startActivityPresenterAsObserver(this);
+        } else {
+            MvpActivity.startActivityViewModelAsContainer(this);
+        }
     }
 }

@@ -6,14 +6,14 @@ import andrade.amilcar.mvp_viewmodel.BasePresenter;
 import andrade.amilcar.mvp_viewmodel.BaseView;
 import andrade.amilcar.mvp_viewmodel.model.Repo;
 
-interface MvpViewModelContract {
+public interface Contract {
 
     interface Presenter extends BasePresenter {
-        // Some other presenter methods
+        // Some other presenter methods ...
     }
 
     interface View extends BaseView<Presenter> {
-
+        // Some other view methods ...
         void showList(List<Repo> list);
     }
 }

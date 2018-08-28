@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">mvp_viewmodel</string>
-    <string name="start_delegate">Presenter as observer</string>
+    <string name="presenter_as_observer">Presenter as observer</string>
+    <string name="view_model_as_container">View model as container</string>
 </resources>
